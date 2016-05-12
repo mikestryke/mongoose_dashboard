@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h1>Welcome to the Animal Dashboard!</h1><hr>
+	<% for(x in all_animals) { %>
+		<p>Name: <%= all_animals[x].name %></p>
+		<p>Color: <%= all_animals[x].color %></p>
+		<p>Age: <%= all_animals[x].age %></p>
+		<p><a href='/animals/<%= all_animals[x]._id %>/'>Show</a></p>
+		<p><a href='/animals/<%= all_animals[x]._id %>/edit'>Edit</a></p>
+		<p><form action='/animals/<%= all_animals[x]._id %>/destroy' method='post'>
+			<input type='submit' value='Delete'>	
+		</form></p>
+		<hr>
+	<% } %>
+	<a href='/animals/new'>Add new Animal!</a>
+
+</body>
+</html>

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h1>Edit Animal</h1>
+	<form action='/animals/<%= animal._id %>/update' method='post'>
+		<p><%= animal.name %> <input type='text' name='name'></p>
+		<p><%= animal.color %> <input type='text' name='color'></p>
+		<p><%= animal.age %> <input type='number' name='age'></p>
+		<p><input type='submit' value='Submit'></p>
+	</form>
+</body>
+</html>

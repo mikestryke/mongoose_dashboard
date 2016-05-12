@@ -1,0 +1,19 @@
+	<style>
+		spam{
+			color:red ;
+		}
+	</style>
+
+	<h1>Add an Animal</h1>
+	 <% if(typeof(errors) != 'undefined' ) { %>
+	     <% for (var x in errors) { %>
+	      <li><spam><%= errors[x].message %></spam></li>
+	     <% } %>
+	 <% } %>
+	<form action='/animals' method='post'>
+		<p>Name: <input type='text' name='name'></p>
+		<p>Color: <input type='text' name='color'></p>
+		<p>Age: <input type='number' name='age'></p>
+		<input type='submit' value='Submit'>
+	</form>
+	<a href='/'>Back</a>
